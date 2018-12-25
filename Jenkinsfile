@@ -8,7 +8,7 @@ pipeline {
 }
 post {
  always {
-  archiveArtifacts artifacts: 'dist/*.zip', fingerprint: true
+  archiveArtifacts artifacts: 'dist/*.jar', fingerprint: true
 }
 }
 }
