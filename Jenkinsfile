@@ -21,7 +21,7 @@ stage('deployment'){
 stage('running on centos'){
 steps {
 sh "wget http://192.168.122.1/rectangles/all/rectangle_${env.BUILD_NUMBER}.jar"
-sh "java -jar/rectangle_${env.BUILD_NUMBER}.jar 5 6"
+sh "java -jar rectangle_${env.BUILD_NUMBER}.jar 5 6"
       }
                           }
 }
