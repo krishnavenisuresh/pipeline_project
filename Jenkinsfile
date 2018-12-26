@@ -1,5 +1,5 @@
 pipeline {
-  agent {lable 'centos'}
+  agent any
   stages {
    stage('unit Tests') {
       steps {
@@ -11,8 +11,7 @@ pipeline {
    steps   {
    sh 'ant -f build.xml -v'
            }
-                  }
-        }
+          }
 stage('deployment'){
  steps {
     sh 'cp dist/rectangle_${env.BUILD_NUMBER}.jar /var/www/html/rectangles/all/*'
