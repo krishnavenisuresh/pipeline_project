@@ -8,6 +8,12 @@ pipeline {
        
                       }
            }
+  post {
+    always {
+      archiveArtifacts artifacts: 'dist /* .jar', fingerPrint : true
+           }
+      }
+    
         }
     
                  
